@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Steven Mirabito - Student & Full Stack Software Engineer</title>
+  <meta name="description" content="Student & Full Stack Software Engineer">
+  <meta name="author" content="Steven Mirabito">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:700" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="container">
+    <img class="avatar" src="https://www.gravatar.com/avatar/6f13acfdcdae8f97b1bfb261d76cb980?s=120&d=mp" aria-hidden="true">
+    <h1>Steven Mirabito</h1>
+    <h2>Student & Full Stack Software Engineer</h2>
+    <div class="links" id="links">
+      <a href="https://stevenmirabito.com/resume.pdf" target="_blank">
+        <img src="images/resume.svg" alt="Resume">
+      </a>
+      <a href="https://github.com/stevenmirabito" target="_blank">
+        <img src="images/github.svg" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/stevenmirabito" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+  <script>
+    // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+    // Random encryption key feature coded by Andrew Moulden
+    // This code is freeware provided these four comment lines remain intact
+    // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+    coded = "DChphQ@DChphQ2koGekCz.0z2"
+    key = "EUdcYPmrZ3lTwkepAK6V8C9JaSMg0nj2oH4usOWhf7F15yBqLGibvIQNxztXRD"
+    shift = coded.length
+    link = ""
+    for (i = 0; i < coded.length; i++) {
+      if (key.indexOf(coded.charAt(i)) == -1) {
+        ltr = coded.charAt(i)
+        link += (ltr)
+      } else {
+        ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length
+        link += (key.charAt(ltr))
+      }
+    }
+    document.getElementById('links').innerHTML += '<a href="mailto:' + link + '"><img src="images/envelope.svg" alt="Email"></a>';
+  </script>
+</body>
+
+</html>
